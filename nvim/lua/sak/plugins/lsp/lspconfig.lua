@@ -40,10 +40,10 @@ return {
         	keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts) -- smart rename
 
         	opts.desc = "Show buffer diagnostics"
-        	keymap.set("n", "<leader>D", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
+        	keymap.set("n", "<leader>Di", "<cmd>Telescope diagnostics bufnr=0<CR>", opts) -- show  diagnostics for file
 
         	opts.desc = "Show line diagnostics"
-        	keymap.set("n", "<leader>d", vim.diagnostic.open_float, opts) -- show diagnostics for line
+        	keymap.set("n", "<leader>di", vim.diagnostic.open_float, opts) -- show diagnostics for line
 
         	opts.desc = "Go to previous diagnostic"
         	keymap.set("n", "[d", vim.diagnostic.goto_prev, opts) -- jump to previous diagnostic in buffer
@@ -76,7 +76,7 @@ return {
 			on_attach = on_attach,
 	})
 
-	lspconfig["pyright"].setup({
+	lspconfig["pylsp"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 	})
@@ -101,7 +101,12 @@ return {
 			on_attach = on_attach,
 	})
 
-	lspconfig["django-template-lsp"].setup({
+	lspconfig["cmake"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+	})
+
+	lspconfig["clangd"].setup({
 			capabilities = capabilities,
 			on_attach = on_attach,
 	})
@@ -112,7 +117,7 @@ return {
 			filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
 			init_options = {
        			vue = {
-            		hybridMode = false,
+            		hybridMode = true,
         		},
         		typescript = {
             		tsdk = "/Users/srivatsavauswin/.local/share/nvim/mason/packages/vue-language-server/node_modules/typescript/lib/"

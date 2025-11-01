@@ -61,7 +61,7 @@ local act = wezterm.action
 config.window_decorations = "RESIZE"
 config.enable_tab_bar = false
 config.tab_bar_at_bottom = true
-config.window_background_opacity = 0.7
+config.window_background_opacity = 0.8
 config.macos_window_background_blur = 10
 
 config.leader = { key = "a", mods = "CTRL", timeout_milliseconds = 1000 }
@@ -158,6 +158,6 @@ config.font = wezterm.font_with_fallback({
 	"JetBrainsMono Nerd Font",
 	"FiraMono Nerd Font",
 })
-config.font_size = 12.5
+config.font_size = 13.2
 
 return config
