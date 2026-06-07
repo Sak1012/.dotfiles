@@ -39,8 +39,8 @@ ctrl + alt - h : yabai -m window --warp west
 ctrl + alt - l : yabai -m window --warp east
 
 #move window to prev and next space
-shift + alt - p : yabai -m window --space prev;
-shift + alt - n : yabai -m window --space next;
+shift + alt - p : yabai -m --space prev;
+shift + alt - n : yabai -m --space next;
 
 
 # move window to space #

@@ -32,11 +32,12 @@ return {
         "cssls",
         "tailwindcss",
         "svelte",
-        "lua_ls",
         "graphql",
         "emmet_ls",
         "prismals",
-        "pyright",
+		"pylsp",
+        "ruff",
+		"lua_ls",
       },
 
 		automatic_installation = true,
@@ -45,10 +46,8 @@ return {
     mason_tool_installer.setup({
       ensure_installed = {
         "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "isort", -- python formatter
+        "ruff", -- python formatter
         "black", -- python formatter
-        "pylint",
         "eslint_d",
       },
     })
